@@ -2,31 +2,96 @@ import java.util.Scanner;
 public class MultiplicationTable {
     public static void main(String[] args) {
 
-        System.out.print( "Start bang: ");
-
         Scanner sc = new Scanner( System.in );
-        int a = sc.nextInt();
+
+        System.out.print( "Start bang: ");
+        int sb = sc.nextInt();
 
         System.out.print( "jub bang: ");
-        int k = sc.nextInt();
+        int eb = sc.nextInt();
 
         System.out.print( "piem toe la: ");
-        int j = sc.nextInt();
+        int ba = sc.nextInt();
 
         System.out.print( "kunkup: ");
-        int m = sc.nextInt();
+        int sk = sc.nextInt();
 
         System.out.print( "jrn hod: ");
-        int n = sc.nextInt();
+        int ek = sc.nextInt();
 
         System.out.print( "tue kun piem toe la: ");
-        int o = sc.nextInt();
-        for(int i = a; i <= k; i+=j){
+        int ka = sc.nextInt();
+        if ( sb < eb && sk < ek ) { //1
+            for(int i = sb; i < eb; i+=ba){
                 System.out.println("Bang: " + i + "der");
-            for(int p = m; p <= n ; p+=o)
-            {
-                System.out.println(i + "X" + p + "=" + (i*p));
+                for(int p = sk; p < ek ; p+=ka)
+                {
+                    System.out.println(i + "X" + p + "=" + (i*p));
+                }
+            }
+        } else if ( sb < eb && sk > ek ) { //2
+            for(int i = sb; i < eb; i+=ba) {
+                System.out.println( "Bang: " + i + "der" );
+                for (int p = sk; p > ek; p -= ka) {
+                    System.out.println( i + "X" + p + "=" + (i * p) );
+                }
+            }
+
+        }  else if ( sb > eb && sk < ek ) { //3
+                for (int i = sb; i > eb; i -= ba) {
+                    System.out.println( "Bang: " + i + "der" );
+                    for (int p = sk; p < ek; p += ka) {
+                        System.out.println( i + "X" + p + "=" + (i * p) );
+                    }
+                }
+            }
+        else if ( sb > eb && sk > ek ) { //4
+            for (int i = sb; i > eb; i -= ba) {
+                System.out.println( "Bang: " + i + "der" );
+                for (int p = sk; p > ek; p -= ka) {
+                    System.out.println( i + "X" + p + "=" + (i * p) );
+                }
             }
         }
+        else if ( sb == eb && sk == ek ) { //5
+            for (int i = sb; i == eb; i += ba) {
+                System.out.println( "Bang: " + i + "der" );
+                for (int p = sk; p == ek; p += ka) {
+                    System.out.println( i + "X" + p + "=" + (i * p) );
+                }
+            }
+        }
+        else if ( sb == eb && sk < ek ) { //6
+            for (int i = sb; i == eb; i += ba) {
+                System.out.println( "Bang: " + i + "der" );
+                for (int p = sk; p < ek; p += ka) {
+                    System.out.println( i + "X" + p + "=" + (i * p) );
+                }
+            }
+        }
+        else if ( sb == eb && sk > ek ) { //7
+            for (int i = sb; i == eb; i += ba) {
+                System.out.println( "Bang: " + i + "der" );
+                for (int p = sk; p > ek; p -= ka) {
+                    System.out.println( i + "X" + p + "=" + (i * p) );
+                }
+            }
+        }
+        else if ( sb > eb && sk == ek ) { //8
+            for (int i = sb; i > eb; i -= ba) {
+                System.out.println( "Bang: " + i + "der" );
+                for (int p = sk; p == ek; p += ka) {
+                    System.out.println( i + "X" + p + "=" + (i * p) );
+                }
+            }
+        }
+        else if ( sb < eb && sk == ek ) { //8
+            for (int i = sb; i < eb; i += ba) {
+                System.out.println( "Bang: " + i + "der" );
+                for (int p = sk; p == ek; p += ka) {
+                    System.out.println( i + "X" + p + "=" + (i * p) );
+                }
+            }
+        }
+        }
     }
-}
